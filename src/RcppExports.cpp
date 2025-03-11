@@ -10,20 +10,32 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// generateTakuzuGrid
-IntegerMatrix generateTakuzuGrid(int size);
-RcppExport SEXP _TakuzuKL_generateTakuzuGrid(SEXP sizeSEXP) {
+// generateValidGrids
+List generateValidGrids(int size);
+RcppExport SEXP _TakuzuKL_generateValidGrids(SEXP sizeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type size(sizeSEXP);
-    rcpp_result_gen = Rcpp::wrap(generateTakuzuGrid(size));
+    rcpp_result_gen = Rcpp::wrap(generateValidGrids(size));
+    return rcpp_result_gen;
+END_RCPP
+}
+// generateValidRows
+List generateValidRows(int size);
+RcppExport SEXP _TakuzuKL_generateValidRows(SEXP sizeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type size(sizeSEXP);
+    rcpp_result_gen = Rcpp::wrap(generateValidRows(size));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_TakuzuKL_generateTakuzuGrid", (DL_FUNC) &_TakuzuKL_generateTakuzuGrid, 1},
+    {"_TakuzuKL_generateValidGrids", (DL_FUNC) &_TakuzuKL_generateValidGrids, 1},
+    {"_TakuzuKL_generateValidRows", (DL_FUNC) &_TakuzuKL_generateValidRows, 1},
     {NULL, NULL, 0}
 };
 

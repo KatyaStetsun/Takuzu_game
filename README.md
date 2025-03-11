@@ -12,11 +12,12 @@ We're in first year of a **Master**'s program and we're creating a Takuzu game i
 
 ## 🕹️ Game rules
 
-Takuzu and Sudoku are somewhat similar: numbers into a grid, , but this time you'll only come across *1*s and *0*s, in 6x6, 8x8 or 12x12 grids!
+Takuzu and Sudoku are somewhat similar: numbers into a grid, , but this time you'll only come across *1*s and *0*s, in 4x4, 6x6 or 8x8 grids!
 
 The rules are as follows:
 - You can't have more than two *1*s (respectively *0*s) following, vertically and horizontally;
-- You must have the same count of *1*s and *0*s in each column and each row (eg. in a 6x6 game, there are three *1*s and three *0*s).
+- You must have the same count of *1*s and *0*s in each column and each row (eg. in a 6x6 game, there are three *1*s and three *0*s);
+- You can't have the same column or the same row twice.
 
 We hope you enjoy your time playing this pink lolita themed Takuzu game as much as we enjoyed creating it!
 
