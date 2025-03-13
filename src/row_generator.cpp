@@ -1,6 +1,6 @@
 #include <Rcpp.h>
 #include <vector>
-#include "row_generator.h"
+#include <fstream>
 
 using namespace Rcpp;
 using namespace std;
@@ -33,7 +33,6 @@ vector<int> intToBinaryRow(int num, int size) {
 }
 
 
-// [[Rcpp::export]]
 List generateValidRows(int size) {
 
   vector<int> row(size);
@@ -57,3 +56,29 @@ List generateValidRows(int size) {
   return result;
 }
 
+void saveValidRows(const String& filename) {
+
+  ofstream outfile(filename);
+
+  for(int i = 4; i < 9; i++) {
+    if(i % 2 == 0) {
+
+      List validRowsList = generateValidRows(i);
+
+      for (int j = 0; j < validRowsList.size(); j++) {
+        IntegerVector row = validRowsList[j];
+
+        for (int k = 0; k < row.size(); k++) {
+          outfile << row[k] << " ";
+        }
+        outfile << endl;
+      }
+    }
+  }
+
+  outfile.close();
+}
+
+/*** R
+saveValidRows("valid_rows.txt")
+*/

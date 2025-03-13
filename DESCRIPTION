@@ -9,10 +9,10 @@ Authors@R: c(
            email = "laura@cletz.fr", 
            role = "aut"))
 Description: A Shiny app to play the Takuzu game, developed as part of a university project.
-License: GPL-3
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5.0)
-Imports: shiny, Rcpp
+Imports: shiny, shinyjs, Rcpp
 LinkingTo: Rcpp
 RoxygenNote: 7.3.2
