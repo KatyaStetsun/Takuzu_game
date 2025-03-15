@@ -7,7 +7,6 @@
 using namespace Rcpp;
 using namespace std;
 
-
 bool isValidGrid(const vector<vector<int>>& grid, int size) {
   if (grid.size() < size) {
     return true;
