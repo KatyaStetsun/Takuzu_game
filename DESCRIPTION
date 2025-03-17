@@ -13,6 +13,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5.0)
-Imports: shiny, shinyjs, Rcpp
+Imports: shiny, shinyjs, Rcpp, readr
 LinkingTo: Rcpp
 RoxygenNote: 7.3.2

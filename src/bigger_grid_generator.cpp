@@ -68,6 +68,7 @@ bool isValidBiggerGrid(const vector<vector<int>>& grid, int size) {
   return true;
 }
 
+
 vector<vector<vector<int>>> readGridsFromFile(const string& filename) {
   ifstream infile(filename);
   string line;
@@ -123,8 +124,6 @@ vector<vector<vector<int>>> readGridsFromFile(const string& filename) {
 }
 
 
-
-
 void generateBiggerGrids(vector<vector<vector<int>>>& validGrids, vector<vector<vector<int>>>& validBiggerGrids) {
   int n = validGrids.size();
 
@@ -170,6 +169,7 @@ void generateBiggerGrids(vector<vector<vector<int>>>& validGrids, vector<vector<
     }
   }
 }
+
 
 void saveBiggerGridsToFile(const vector<vector<vector<int>>>& grids, int size, const string& output_dir) {
   string filename = output_dir + "/valid_grid_" + to_string(size) + "x" + to_string(size) + ".csv";
