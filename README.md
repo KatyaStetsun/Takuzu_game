@@ -1,6 +1,6 @@
-<img src="Takuzu_game/www/title.png" 
+<img src="www/title.png" 
         alt="Title" 
-        width="700" 
+        width="900" 
         height="500" 
         style="display: block; margin: 0 auto;" />
 
